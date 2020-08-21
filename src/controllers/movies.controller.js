@@ -46,7 +46,7 @@ const getAllMovies = async (req, res) => {
   let fetchedMovies;
 
   try {
-    fetchedMovies = await Movie.find({},'name img summary');
+    fetchedMovies = await Movie.find({},'name img summary -_id');
   } catch (err) {
     console.log(err)
     const error = new HttpResponse(
