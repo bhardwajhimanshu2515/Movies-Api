@@ -34,7 +34,7 @@ const createin = async (req, res) => {
   }
   console.log(createdMovie);
   res.status(201).json({
-    name:createdMovie.ownername,
+    name:createdMovie.name,
     img: createdMovie.img,
     summary: createdMovie.summary
   });
@@ -46,7 +46,7 @@ const getAllMovies = async (req, res) => {
   let fetchedMovies;
 
   try {
-    fetchedMovies = await Shop.find();
+    fetchedMovies = await Movie.find({},'name img summary');
   } catch (err) {
     console.log(err)
     const error = new HttpResponse(
@@ -56,7 +56,7 @@ const getAllMovies = async (req, res) => {
     return res.status(500).json({ response: error })
   }
   res.status(201).json({
-     fetchedMovies
+    fetchedMovies
   });
 };
 
