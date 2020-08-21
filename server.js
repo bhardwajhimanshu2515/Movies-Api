@@ -33,7 +33,7 @@ app.use('/api/users', usersRoutes);
 app.use('/api/movies',moviesRoutes);
 
 // heroku
-var dburl = "mongodb://127.0.0.1:27017/credencedb";
+var dburl = "mongodb://127.0.0.1:27017/moviesdb";
 
 mongoose
   .connect(dburl,{ useUnifiedTopology: true, 
