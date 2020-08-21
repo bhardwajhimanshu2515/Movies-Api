@@ -2,7 +2,7 @@ const express = require('express');
 const checkToken = require('../middlewares/checkToken')
 const { check } = require('express-validator');
 
-const shopController = require("../controllers/movie.controller");
+const movieController = require("../controllers/movies.controller");
 
 const router = express.Router();
 //all the api written below this will require a token
