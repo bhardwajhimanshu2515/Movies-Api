@@ -168,7 +168,7 @@ const login = async (req, res) => {
   console.log(token);
 };
 
-exports.getspecificUser=getspecificUser;
+
 exports.getUsers = getUsers;
 exports.singin = signup;
 exports.login = login;
