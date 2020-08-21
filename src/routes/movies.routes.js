@@ -9,7 +9,7 @@ const router = express.Router();
 router.use(checkToken);
 
 router.post('/create',movieController.createin);
-router.get('/allMovies',movieController.getAllShops);
+router.get('/allMovies',movieController.getAllMovies);
 module.exports = router;
 
 
