@@ -1,0 +1,20 @@
+POST http://localhost:5000/api/users/signup
+content-type: application/json
+
+{ 
+
+  "name": "Devanshh Shrivastvaaaa",
+  "phoneNumber":"9829648888",
+  "email": "devansh;@typ.in",
+  "password": "1234566788" 
+}
+
+###
+
+POST http://localhost:5000/api/users/login
+content-type: application/json
+
+{ 
+  "email": "devansh;@typ.in",
+  "password": "1234566788" 
+}

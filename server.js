@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 
 const usersRoutes = require('./src/routes/users.routes');
+const moviesRoutes = require('./src/routes/movies.routes');
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use((req, res, next) => {
 
 //using routes
 app.use('/api/users', usersRoutes);
+app.use('/api/movies',moviesRoutes);
 
 // heroku
 var dburl = "mongodb://127.0.0.1:27017/credencedb";
