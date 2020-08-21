@@ -1,7 +1,7 @@
 "use strict"
 const { validationResult } = require('express-validator');
 const HttpResponse = require('../models/http-response');
-const Shop = require('../models/shop');
+const Shop = require('../models/movie');
 const bodyParser = require('body-parser');
 const bycrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');

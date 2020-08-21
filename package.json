@@ -25,6 +25,7 @@
     "mongo": "^0.1.0",
     "mongoose": "^5.10.0",
     "mongoose-unique-validator": "^2.0.3",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "url": "^0.11.0"
   }
 }

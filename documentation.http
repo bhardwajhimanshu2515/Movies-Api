@@ -18,3 +18,21 @@ content-type: application/json
   "email": "devansh;@typ.in",
   "password": "1234566788" 
 }
+
+
+###
+
+POST  http://localhost:5000/api/movies/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjI1M2RlYzA4YWNlNDBkNWM2ZGU0NjAiLCJlbWFpbCI6ImRldmFubm5ubnNoaDtAdHlwLmluIiwiaWF0IjoxNTk2Mjc2NDg0LCJleHAiOjE1OTYyODAwODR9.dHGzFFvtKP-hlmb77tjCWqbyj1JKn9K2cc8LwJ03CuY
+
+content-type: application/json
+
+{ 
+  "userId":"5f253dec08ace40d5c6de460",
+  "ownername":"Himanshu Bhardwaj",
+  "shopname":"Burger King V3.0",
+  "address":"276-280 Jhotwara",
+  "pincode":"302028",
+  "city":"Jaipur",
+  "phoneNumber":"0101010105"
+}
