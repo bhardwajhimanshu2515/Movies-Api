@@ -6,20 +6,6 @@ const jwt = require('jsonwebtoken');
 const HttpResponse = require('../models/http-response');
 const User = require('../models/user');
 
-const getUsers = async (req, res) => {
-  let users;
-  try {
-    users = await User.find({})
-  } catch (err) {
-    const error = new HttpResponse(
-      'Fetching users failed, please try again later.',
-      500
-    );
-    return res.json({ result: error });
-  }
-  return res.json({ result: users });
-};
-
 const signup = async (req, res) => {
   // const errors = validationResult(req);
   // if (!errors.isEmpty()) {
@@ -168,7 +154,5 @@ const login = async (req, res) => {
   console.log(token);
 };
 
-
-exports.getUsers = getUsers;
 exports.singin = signup;
 exports.login = login;

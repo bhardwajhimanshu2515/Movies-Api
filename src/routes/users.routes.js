@@ -24,7 +24,6 @@ router.post('/login', usersController.login);
 //all the api written below this will require a token
 router.use(checkToken);
 
-router.get('/', usersController.getUsers);
 
 module.exports = router;
 
