@@ -3,9 +3,9 @@ content-type: application/json
 
 { 
 
-  "name": "Devanshh Shrivastvaaaa",
-  "phoneNumber":"9829648888",
-  "email": "devansh;@typ.in",
+  "name": "Himanshu Bhardwaj",
+  "phoneNumber":"982964XXXX",
+  "email": "bhardwajhimanshu2515@gmail.com",
   "password": "1234566788" 
 }
 
@@ -15,7 +15,7 @@ POST http://localhost:5000/api/users/login
 content-type: application/json
 
 { 
-  "email": "devansh;@typ.in",
+  "email": "bhardwajhimanshu2515@gmail.com",
   "password": "1234566788" 
 }
 
@@ -23,19 +23,19 @@ content-type: application/json
 ###
 
 POST  http://localhost:5000/api/movies/create
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjNmZGY1MDIxNmFhZjNlNTA4NjdmMTMiLCJlbWFpbCI6ImRldmFuc2g7QHR5cC5pbiIsImlhdCI6MTU5ODAyMjc2NCwiZXhwIjoxNTk4MDI2MzY0fQ.OLqrtDM9_3M-bOx5aLx4iMZxL32_8PBFuVpod6fcatU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjNmZWZhZDNiZWZiNzNjYzRjY2VhNDEiLCJlbWFpbCI6ImJoYXJkd2FqaGltYW5zaHUyNTE1QGdtYWlsLmNvbSIsImlhdCI6MTU5ODAyNTg0NCwiZXhwIjoxNTk4MDI5NDQ0fQ.dfKdh-qm56zd_XTpr7VScWl0aWlRxtoAZuOO7O9A_M4
 content-type: application/json
 
 { 
-  "userId":"5f3fdf50216aaf3e50867f13",
-  "name":"Avengers: Endgame",
-  "img":"https://bit.ly/2Pzczlb",
-  "summary":"Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America and Bruce Banner -- must figure out a way to bring back their vanquished allies for an epic showdown with Thanos -- the evil demigod who decimated the planet and the universe."
+  "userId":"5f3fefad3befb73cc4ccea41",
+  "name":"Harry Potter and the Order of the Phoenix",
+  "img":"https://bit.ly/2IcnSwz",
+  "summary":"Harry Potter and Dumbledore's warning about the return of Lord Voldemort is not heeded by the wizard authorities who, in turn, look to undermine Dumbledore's authority at Hogwarts and discredit Harry."
 }
 
 
 ###
 GET http://localhost:5000/api/movies/allMovies
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjNmZGY1MDIxNmFhZjNlNTA4NjdmMTMiLCJlbWFpbCI6ImRldmFuc2g7QHR5cC5pbiIsImlhdCI6MTU5ODAyMjc2NCwiZXhwIjoxNTk4MDI2MzY0fQ.OLqrtDM9_3M-bOx5aLx4iMZxL32_8PBFuVpod6fcatU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjNmZWZhZDNiZWZiNzNjYzRjY2VhNDEiLCJlbWFpbCI6ImJoYXJkd2FqaGltYW5zaHUyNTE1QGdtYWlsLmNvbSIsImlhdCI6MTU5ODAyNTg0NCwiZXhwIjoxNTk4MDI5NDQ0fQ.dfKdh-qm56zd_XTpr7VScWl0aWlRxtoAZuOO7O9A_M4
 
 
