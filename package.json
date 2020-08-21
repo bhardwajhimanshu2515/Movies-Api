@@ -23,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongo": "^0.1.0",
     "mongoose": "^5.10.0",
+    "mongoose-unique-validator": "^2.0.3",
     "path": "^0.12.7"
   }
 }
