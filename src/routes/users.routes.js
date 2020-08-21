@@ -25,8 +25,6 @@ router.post('/login', usersController.login);
 router.use(checkToken);
 
 router.get('/', usersController.getUsers);
-router.get('/specificUser', usersController.getspecificUser);
-
 
 module.exports = router;
 
