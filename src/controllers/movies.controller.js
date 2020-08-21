@@ -55,9 +55,9 @@ const getAllMovies = async (req, res) => {
     );
     return res.status(500).json({ response: error })
   }
-  res.status(201).json({
+  res.status(201).json(
     fetchedMovies
-  });
+);
 };
 
 
