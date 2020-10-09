@@ -1,9 +1,6 @@
 const express = require('express');
-const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
-
 
 const usersRoutes = require('./src/routes/users.routes');
 const moviesRoutes = require('./src/routes/movies.routes');
@@ -14,7 +11,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
 
 
 // TOKEN AUTHENTICATION- ALL THE ROUTES WRITTEN BELOW THIS WILL NEED TOKEN TO BE SENT in request headers

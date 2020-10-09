@@ -1,19 +1,11 @@
 "use strict"
-const { validationResult } = require('express-validator');
 const bycrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-
 const HttpResponse = require('../models/http-response');
 const User = require('../models/user');
 
 const signup = async (req, res) => {
-  // const errors = validationResult(req);
-  // if (!errors.isEmpty()) {
-  //   const error = new HttpResponse('Invalid inputs passed, please check your data.', 422)
-  //   res.json({ response: error })
-  // }
-  console.log(req.body)
-  const { name,phoneNumber, email, password,position,salary,TopSkill,userDept } = req.body;
+  const { name,phoneNumber, email, password} = req.body;
   // checking if user already exists
   let existingUser;
   try {
@@ -46,11 +38,7 @@ const signup = async (req, res) => {
     name,
     phoneNumber,
     email,
-    password: hashedPassword,
-    position,
-    salary,
-    TopSkill,
-    userDept
+    password: hashedPassword
   });
   try {
     await createdUser.save();
@@ -76,17 +64,11 @@ const signup = async (req, res) => {
     );
     return res.status(500).json({ response: error });
   }
-
-
   res.status(201).json({
     userId: createdUser.id,
     phoneNumber:createdUser.phoneNumber,
     email: createdUser.email,
-    position:createdUser.position,
-    salary:createdUser.salary,
-    TopSkill:createdUser.TopSkill,
-    token: token,
-    userDept:createdUser.userDept
+    token: token
   });
 };
 
@@ -145,11 +127,7 @@ const login = async (req, res) => {
     userId: existingUser.id,
     phoneNumber:existingUser.phoneNumber,
     email: existingUser.email,
-    position:existingUser.position,
-    salary:existingUser.salary,
-    TopSkill:existingUser.TopSkill,
-    token: token,
-    userDept:existingUser.userDept
+    token: token
   });
   console.log(token);
 };

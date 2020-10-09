@@ -1,26 +1,17 @@
 "use strict"
-const { validationResult } = require('express-validator');
 const HttpResponse = require('../models/http-response');
 const Movie = require('../models/movie');
-const bodyParser = require('body-parser');
-const bycrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const usersController = require("../controllers/users.controller");
-const User = require('../models/user');
-const url = require('url');
+
 //the below function to create a movie
 const createin = async (req, res) => {
   const {userId,name,img,summary} = req.body;
-  const ownerId = userId;
-  const createdBy = userId;
-  const updatedBy = userId;
   const createdMovie = new Movie({
     name,
     img,
     summary,
-    ownerId,
-    createdBy,
-    updatedBy
+    ownerId:userId,
+    createdBy:userId,
+    updatedBy:userId
   });
   try {
     await createdMovie.save();
@@ -59,8 +50,6 @@ const getAllMovies = async (req, res) => {
     fetchedMovies
 );
 };
-
-
 
 exports.createin = createin;
 exports.getAllMovies = getAllMovies;
